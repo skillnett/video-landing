@@ -1,12 +1,8 @@
-import {
-    AppLogo,
-    AppStoreLinkIco,
-    InstagramIco,
-    TwitterIco,
-} from 'assets/icons';
+import { AppStoreLinkIco, InstagramIco, TwitterIco } from 'assets/icons';
 import { Container } from 'components/container';
 import { DownloadButton } from 'components/downloadButton';
 import { BodyTextSm, Heading4 } from 'components/shared/styles';
+import Image from 'next/image';
 import React from 'react';
 import {
     DownloadButtonWrapper,
@@ -22,7 +18,7 @@ export const Footer = () => {
         <FooterWrapper>
             <Container>
                 <LogoWrapper>
-                    <AppLogo />
+                    <Image src='/logo.png' width={155} height={26} alt='logo' />
                 </LogoWrapper>
 
                 <DownloadButtonWrapper>
