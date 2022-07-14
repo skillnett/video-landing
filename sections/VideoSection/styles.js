@@ -54,7 +54,7 @@ export const HeadingWrapper = styled.div`
 `;
 
 export const SubheadingWrapper = styled.div`
-    margin-left: -14px;
+    margin-left: -6px;
 
     ${respondTo.md`
       margin-left: 0;
@@ -62,7 +62,7 @@ export const SubheadingWrapper = styled.div`
 `;
 
 export const PlayerWrapper = styled.div`
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
 `;
 

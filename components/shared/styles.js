@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { respondTo } from 'utils/respondTo';
 
 export const Heading1 = styled.h1`
-    font-weight: 600;
+    font-weight: bold;
     font-size: 42px;
     line-height: 120%;
 
@@ -13,7 +13,7 @@ export const Heading1 = styled.h1`
 `;
 
 export const Heading2 = styled.h2`
-    font-weight: 600;
+    font-weight: bold;
     font-size: 34px;
     line-height: 120%;
 
@@ -24,14 +24,14 @@ export const Heading2 = styled.h2`
 `;
 
 export const Heading3 = styled.h3`
-    font-weight: 600;
+    font-weight: bold;
     font-size: 18px;
     line-height: 120%;
     letter-spacing: 0.05em;
 `;
 
 export const Heading4 = styled.h4`
-    font-weight: 600;
+    font-weight: bold;
     font-size: 16px;
     line-height: 120%;
     letter-spacing: 0.05em;

@@ -63,7 +63,7 @@ export const SlideWrapper = styled.div`
     margin-right: 14px;
 
     ${respondTo.md`
-      width: 384px !important;
+      width: 390px !important;
       padding: 40px;
       margin-right: 24px;
     `}

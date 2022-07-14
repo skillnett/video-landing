@@ -47,6 +47,7 @@ export const VideoSection = () => {
                     <ReactPlayer
                         loop
                         muted
+                        playsinline
                         playing={isPlaying}
                         onReady={() => setPlaying(true)}
                         url='video/palm.mp4'

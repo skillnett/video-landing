@@ -1,12 +1,17 @@
 import { Colors } from 'constants/colors';
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
+import fonts from 'assets/fonts';
 
 export const GlobalStyles = createGlobalStyle`
+  ${fonts}
   ${normalize}
+
+  html, body {
+    font-family: Silka;
+  }
  
   body {
-    font-family: sans-serif; 
     padding: 0;
     margin: 0;
     background-color: ${Colors.secondaryDark};

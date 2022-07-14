@@ -21,8 +21,25 @@ import {
 import { Container } from 'components/container';
 import TextTruncate from 'react-text-truncate';
 import { FiveStarsIco, FourStarsIco } from 'assets/icons';
-import { breakpoints } from 'constants/breakpoints';
 import { ColorShapeComponent } from 'components/floatedShapes/ColorShape';
+import Modal from 'react-modal';
+import { Colors } from 'constants/colors';
+
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        maxWidth: 600,
+        width: '85%',
+    },
+    overlay: {
+        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    },
+};
 
 const comments = [
     {
@@ -104,6 +121,17 @@ export const FeedbackSection = () => {
         return () => window.removeEventListener('resize', updatePadding);
     }, []);
 
+    const [isModalOpen, setModalOpen] = useState(false);
+    const [selectedComment, setSelectedComment] = useState(null);
+
+    const handleModalOpen = commentId => {
+        const comment = comments.find(({ id }) => id === commentId);
+        setSelectedComment(comment);
+        setModalOpen(true);
+    };
+
+    const handleModalClose = () => setModalOpen(false);
+
     return (
         <FeedbackSectionWrapper>
             <Container>
@@ -133,7 +161,10 @@ export const FeedbackSection = () => {
                                 truncateText='…'
                                 text={text}
                                 textTruncateChild={
-                                    <ReadMoreBtn type='button'>
+                                    <ReadMoreBtn
+                                        type='button'
+                                        onClick={() => handleModalOpen(id)}
+                                    >
                                         <Heading3 className='text-gradient'>
                                             Read more
                                         </Heading3>
@@ -148,6 +179,25 @@ export const FeedbackSection = () => {
 
                 <ColorShapeComponent className='feedback' />
             </StyledWrapper>
+
+            <Modal
+                isOpen={isModalOpen}
+                onRequestClose={handleModalClose}
+                style={customStyles}
+            >
+                <Heading2 style={{ color: Colors.dark, marginBottom: 16 }}>
+                    {selectedComment?.title}
+                </Heading2>
+                <BodyTextNormal
+                    style={{ color: Colors.dark, marginBottom: 16 }}
+                >
+                    {selectedComment?.text}
+                </BodyTextNormal>
+
+                <Heading3 style={{ color: Colors.dark, textAlign: 'right' }}>
+                    {selectedComment?.userName}
+                </Heading3>
+            </Modal>
         </FeedbackSectionWrapper>
     );
 };
