@@ -1,0 +1,11 @@
+export { default as AppLogo } from './logo.svg';
+export { default as AppleIco } from './apple.svg';
+export { default as ContactIco } from './contact.svg';
+export { default as AppStoreIco } from './app-store.svg';
+export { default as DownloadIco } from './download-title.svg';
+export { default as FourStarsIco } from './4-stars.svg';
+export { default as FiveStarsIco } from './5-stars.svg';
+export { default as CheckMarkIco } from './checkmark.svg';
+export { default as TwitterIco } from './twitter.svg';
+export { default as AppStoreLinkIco } from './app-store-ico.svg';
+export { default as InstagramIco } from './instagram.svg';
