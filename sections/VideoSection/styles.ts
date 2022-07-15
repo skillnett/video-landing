@@ -62,7 +62,7 @@ export const SubheadingWrapper = styled.div`
 `;
 
 export const PlayerWrapper = styled.div`
-    border-radius: 20px;
+    position: relative;
     overflow: hidden;
 `;
 
@@ -71,4 +71,21 @@ export const PlayerSectionWrapper = styled.div`
     ${respondTo.md`
       flex: 0.9;
     `}
+`;
+
+export const ProgressBar = styled.div<any>`
+    transition: 1s linear all;
+    position: absolute;
+    height: 4px;
+    width: ${({ $width }) => `${$width}%`};
+    background-image: ${(props: any) =>
+        `linear-gradient(
+        135deg,
+        ${props.theme.colors.gradientPrimary} 0%,
+        ${props.theme.colors.gradientSecondary} 100%
+    )`};
+    z-index: 1;
+    bottom: 6px;
+    border-end-end-radius: 10px;
+    border-end-start-radius: 10px;
 `;

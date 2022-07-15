@@ -32,4 +32,10 @@ export const GlobalStyles = createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  video {
+    border-radius: 10px;
+    border-end-end-radius: 5px;
+    border-end-start-radius: 5px;
+  }
 `;

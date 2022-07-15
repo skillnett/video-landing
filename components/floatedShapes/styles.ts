@@ -4,6 +4,7 @@ import { respondTo } from 'utils/respondTo';
 export const ColorShapeWrapper = styled.div`
     position: absolute;
     top: -30px;
+    z-index: 2;
     right: 25%;
 
     ${respondTo.md`

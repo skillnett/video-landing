@@ -7,6 +7,7 @@ export const BackgroundShapeLg = () => {
         <BackgroundShapeWrapper>
             <BackgroundShape>
                 <Image
+                    priority
                     src='/shape-big-circle.png'
                     layout='fill'
                     alt='color shape'

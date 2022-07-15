@@ -8,6 +8,7 @@ export const FooterWrapper = styled.div`
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 99;
 
     ${respondTo.md`
       border-radius: 0;
