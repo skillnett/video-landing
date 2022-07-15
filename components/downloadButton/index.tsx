@@ -1,24 +1,32 @@
 import { AppleIco, AppStoreIco, DownloadIco } from 'assets/icons';
-import { Colors } from 'constants/colors';
 import React from 'react';
+import { useTheme } from 'styled-components';
 import { StyledDownloadButton, TitleWrapper } from './styles';
 
-export const DownloadButton = ({ onClick, disabled }) => {
+export const DownloadButton = ({ onClick, disabled }: any) => {
+    const theme: any = useTheme();
+
     return (
         <StyledDownloadButton
             onClick={onClick}
             disabled={disabled}
             type='button'
         >
-            <AppleIco color={disabled ? Colors.darkGrey : Colors.white} />
+            <AppleIco
+                color={disabled ? theme.colors.darkGrey : theme.colors.white}
+            />
 
             <TitleWrapper>
                 <DownloadIco
-                    color={disabled ? Colors.darkGrey : Colors.white}
+                    color={
+                        disabled ? theme.colors.darkGrey : theme.colors.white
+                    }
                 />
 
                 <AppStoreIco
-                    color={disabled ? Colors.darkGrey : Colors.white}
+                    color={
+                        disabled ? theme.colors.darkGrey : theme.colors.white
+                    }
                     className='title'
                 />
             </TitleWrapper>

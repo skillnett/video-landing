@@ -23,7 +23,7 @@ import TextTruncate from 'react-text-truncate';
 import { FiveStarsIco, FourStarsIco } from 'assets/icons';
 import { ColorShapeComponent } from 'components/floatedShapes/ColorShape';
 import Modal from 'react-modal';
-import { Colors } from 'constants/colors';
+import { useTheme } from 'styled-components';
 
 const customStyles = {
     content: {
@@ -93,6 +93,7 @@ const comments = [
 ];
 
 export const FeedbackSection = () => {
+    const theme: any = useTheme();
     const settings = {
         infinite: false,
         dots: true,
@@ -103,7 +104,7 @@ export const FeedbackSection = () => {
         arrows: false,
     };
 
-    const titleRef = useRef(null);
+    const titleRef: any = useRef(null);
 
     const [paddingLeft, setPaddingLeft] = useState(0);
     const [isMobile, setIsMobile] = useState(true);
@@ -122,9 +123,9 @@ export const FeedbackSection = () => {
     }, []);
 
     const [isModalOpen, setModalOpen] = useState(false);
-    const [selectedComment, setSelectedComment] = useState(null);
+    const [selectedComment, setSelectedComment] = useState<any>(null);
 
-    const handleModalOpen = commentId => {
+    const handleModalOpen = (commentId: number) => {
         const comment = comments.find(({ id }) => id === commentId);
         setSelectedComment(comment);
         setModalOpen(true);
@@ -185,16 +186,20 @@ export const FeedbackSection = () => {
                 onRequestClose={handleModalClose}
                 style={customStyles}
             >
-                <Heading2 style={{ color: Colors.dark, marginBottom: 16 }}>
+                <Heading2
+                    style={{ color: theme.colors.dark, marginBottom: 16 }}
+                >
                     {selectedComment?.title}
                 </Heading2>
                 <BodyTextNormal
-                    style={{ color: Colors.dark, marginBottom: 16 }}
+                    style={{ color: theme.colors.dark, marginBottom: 16 }}
                 >
                     {selectedComment?.text}
                 </BodyTextNormal>
 
-                <Heading3 style={{ color: Colors.dark, textAlign: 'right' }}>
+                <Heading3
+                    style={{ color: theme.colors.dark, textAlign: 'right' }}
+                >
                     {selectedComment?.userName}
                 </Heading3>
             </Modal>

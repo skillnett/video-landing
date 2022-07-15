@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { css } from 'styled-components';
 
 import SilkaSemiBoldWoff2 from './Silka-SemiBold.woff2';

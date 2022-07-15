@@ -2,7 +2,7 @@ import React from 'react';
 import styledComponents from 'styled-components';
 import { respondTo } from 'utils/respondTo';
 
-export const Container = ({ children }) => {
+export const Container = ({ children }: any) => {
     return <StyledContainer>{children}</StyledContainer>;
 };
 

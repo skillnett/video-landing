@@ -1,4 +1,3 @@
-import { Colors } from 'constants/colors';
 import styled from 'styled-components';
 import { respondTo } from 'utils/respondTo';
 
@@ -9,24 +8,24 @@ export const StyledDownloadButton = styled.button`
     padding: 13px 40px;
     border-radius: 20px;
     transition: 0.25s ease all;
-    background-color: ${Colors.dark};
-    background-image: ${props =>
+    background-color: ${({ theme }: any) => theme.colors.dark};
+    background-image: ${(props: any) =>
         props.disabled
             ? 'none'
             : `linear-gradient(
         135deg,
-        ${Colors.gradientPrimary} 0%,
-        ${Colors.gradientSecondary} 100%
+        ${props.theme.colors.gradientPrimary} 0%,
+        ${props.theme.colors.gradientSecondary} 100%
     )`};
 
     &:hover {
-        background-image: ${props =>
+        background-image: ${(props: any) =>
             props.disabled
                 ? 'none'
                 : `linear-gradient(
                       147deg,
-                      ${Colors.gradientPrimary} -13.33%,
-                      ${Colors.gradientSecondary} 46.64%
+                      ${props.theme.colors.gradientPrimary} -13.33%,
+                      ${props.theme.colors.gradientSecondary} 46.64%
                   )`};
     }
 

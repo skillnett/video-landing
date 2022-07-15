@@ -1,9 +1,8 @@
-import { Colors } from 'constants/colors';
 import styled from 'styled-components';
 import { respondTo } from 'utils/respondTo';
 
 export const FooterWrapper = styled.div`
-    background: ${Colors.dark};
+    background: ${({ theme }: any) => theme.colors.dark};
     padding: 20px 0;
     border-radius: 24px 24px 0px 0px;
     position: fixed;

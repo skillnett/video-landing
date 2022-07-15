@@ -1,11 +1,10 @@
-import { Colors } from 'constants/colors';
 import { createGlobalStyle } from 'styled-components';
-import { normalize } from 'styled-normalize';
+import { reset } from 'styled-modern-css-reset';
 import fonts from 'assets/fonts';
 
 export const GlobalStyles = createGlobalStyle`
   ${fonts}
-  ${normalize}
+  ${reset}
 
   html, body {
     font-family: Silka;
@@ -14,8 +13,8 @@ export const GlobalStyles = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    background-color: ${Colors.secondaryDark};
-    color: ${Colors.white};
+    background-color: ${(props: any) => props.theme.colors.secondaryDark};
+    color: ${(props: any) => props.theme.colors.white};
     position: relative;
   }
 
@@ -24,7 +23,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .text-gradient {
-    background: -webkit-linear-gradient(${Colors.gradientPrimary}, ${Colors.gradientSecondary});
+    background: ${(props: any) =>
+        `-webkit-linear-gradient(${props.theme.colors.gradientPrimary}, ${props.theme.colors.gradientSecondary})`};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

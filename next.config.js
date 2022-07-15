@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
-
 const webpack = require('webpack');
-const withPreact = require('next-plugin-preact');
 
-module.exports = withPreact({
+const nextConfig = {
     reactStrictMode: true,
     compiler: {
         styledComponents: true,
@@ -34,4 +32,6 @@ module.exports = withPreact({
 
         return config;
     },
-});
+};
+
+module.exports = nextConfig;

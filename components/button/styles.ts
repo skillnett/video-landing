@@ -1,9 +1,8 @@
-import { Colors } from 'constants/colors';
 import styled from 'styled-components';
 import { respondTo } from 'utils/respondTo';
 
 export const StyledButton = styled.button`
-    background-color: ${Colors.dark};
+    background-color: ${({ theme }: any) => theme.colors.dark};
     padding: 10px 10px 8px 8px;
     transition: 0.2s ease all;
     display: flex;
@@ -14,7 +13,7 @@ export const StyledButton = styled.button`
 
     span {
         display: none;
-        color: ${Colors.white};
+        color: ${({ theme }: any) => theme.colors.white};
         font-size: 16px;
         margin-right: 10px;
     }
@@ -29,19 +28,19 @@ export const StyledButton = styled.button`
     `}
 
     &:focus {
-        border: 4px solid ${Colors.darkGrey};
+        border: ${({ theme }: any) => `4px solid ${theme.colors.darkGrey}`};
     }
 
     &:disabled {
-        border: 1px solid ${Colors.darkGrey};
-        background-color: ${Colors.secondaryDark};
+        border: ${({ theme }: any) => `1px solid ${theme.colors.darkGrey}`};
+        background-color: ${({ theme }: any) => theme.colors.secondaryDark};
 
         span {
-            color: ${Colors.darkGrey};
+            color: ${({ theme }: any) => theme.colors.darkGrey};
         }
     }
 
     &:hover: {
-        background-color: ${Colors.darkGrey};
+        background-color: ${({ theme }: any) => theme.colors.darkGrey};
     }
 `;

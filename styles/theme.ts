@@ -1,6 +1,6 @@
 import { breakpoints } from 'constants/breakpoints';
 
-const theme = {
+const theme: any = {
     colors: {
         dark: '#000',
         secondaryDark: '#151212',

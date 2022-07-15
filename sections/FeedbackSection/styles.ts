@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { respondTo } from 'utils/respondTo';
 import SlickSlider from 'react-slick';
-import { Colors } from 'constants/colors';
 
 export const FeedbackSectionWrapper = styled.div`
     padding: 50px 0;
@@ -32,7 +31,7 @@ export const StyledSlider = styled(SlickSlider)`
     .slick-dots {
         & li button:before {
             opacity: 1;
-            background: ${Colors.darkGrey};
+            background: ${({ theme }: any) => theme.colors.darkGrey};
             width: 6px;
             height: 6px;
             content: ' ';
@@ -44,7 +43,7 @@ export const StyledSlider = styled(SlickSlider)`
         }
 
         & li.slick-active button:before {
-            background: ${Colors.white};
+            background: ${({ theme }: any) => theme.colors.white};
             width: 56px;
             height: 6px;
             content: ' ';
@@ -53,12 +52,12 @@ export const StyledSlider = styled(SlickSlider)`
     }
 `;
 
-export const SlideWrapper = styled.div`
+export const SlideWrapper = styled.div<any>`
     width: ${props =>
         props.$isMobile ? '300px !important' : 'width: 384px !important'};
     padding: 16px;
     padding-top: 40px;
-    background: ${Colors.dark};
+    background: ${({ theme }: any) => theme.colors.dark};
     border-radius: 10px;
     margin-right: 14px;
 
@@ -85,5 +84,5 @@ export const ReadMoreBtn = styled.button`
     padding: 0;
     border: none;
     background: none;
-    color: ${Colors.white};
+    color: ${({ theme }: any) => theme.colors.white};
 `;
