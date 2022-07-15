@@ -8,7 +8,7 @@ export const Header = () => {
         <StyledHeader>
             <AppLogo />
 
-            <Button title='Contact us' handleClick={() => {}} />
+            <Button title='Contact us' href='mailto:test@email.com' />
         </StyledHeader>
     );
 };

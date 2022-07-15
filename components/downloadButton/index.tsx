@@ -3,12 +3,16 @@ import React from 'react';
 import { useTheme } from 'styled-components';
 import { StyledDownloadButton, TitleWrapper } from './styles';
 
-export const DownloadButton = ({ onClick, disabled }: any) => {
+export const DownloadButton = ({ disabled }: any) => {
     const theme: any = useTheme();
 
     return (
         <StyledDownloadButton
-            onClick={onClick}
+            onClick={() =>
+                window
+                    .open('https://apps.apple.com/app/id1488926745', '_blank')
+                    ?.focus()
+            }
             disabled={disabled}
             type='button'
         >

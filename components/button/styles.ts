@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { respondTo } from 'utils/respondTo';
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.a<any>`
     background-color: ${({ theme }: any) => theme.colors.dark};
     padding: 10px 10px 8px 8px;
     transition: 0.2s ease all;
@@ -10,6 +10,7 @@ export const StyledButton = styled.button`
     align-items: center;
     border-radius: 100%;
     border: 4px solid transparent;
+    text-decoration: none;
 
     span {
         display: none;
@@ -29,15 +30,6 @@ export const StyledButton = styled.button`
 
     &:focus {
         border: ${({ theme }: any) => `4px solid ${theme.colors.darkGrey}`};
-    }
-
-    &:disabled {
-        border: ${({ theme }: any) => `1px solid ${theme.colors.darkGrey}`};
-        background-color: ${({ theme }: any) => theme.colors.secondaryDark};
-
-        span {
-            color: ${({ theme }: any) => theme.colors.darkGrey};
-        }
     }
 
     &:hover: {

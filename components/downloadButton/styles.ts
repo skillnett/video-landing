@@ -17,6 +17,8 @@ export const StyledDownloadButton = styled.button`
         ${props.theme.colors.gradientPrimary} 0%,
         ${props.theme.colors.gradientSecondary} 100%
     )`};
+    width: 100%;
+    justify-content: center;
 
     &:hover {
         background-image: ${(props: any) =>
@@ -36,6 +38,10 @@ export const StyledDownloadButton = styled.button`
     .title {
         margin-top: 5px;
     }
+
+    ${respondTo.md`
+      width: initial;
+    `}
 `;
 
 export const TitleWrapper = styled.div`
