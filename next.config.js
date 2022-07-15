@@ -1,9 +1,20 @@
 /** @type {import('next').NextConfig} */
 
-module.exports = {
+const webpack = require('webpack');
+const withPreact = require('next-plugin-preact');
+
+module.exports = withPreact({
     reactStrictMode: true,
-    swcMinify: true,
+    compiler: {
+        styledComponents: true,
+    },
     webpack(config) {
+        config.plugins = config.plugins || [];
+
+        config.plugins.push(
+            new webpack.IgnorePlugin({ resourceRegExp: /\/iconv-loader$/ })
+        );
+
         config.module.rules.push({
             test: /\.svg$/,
             use: [
@@ -23,4 +34,4 @@ module.exports = {
 
         return config;
     },
-};
+});
