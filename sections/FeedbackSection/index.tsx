@@ -35,6 +35,7 @@ const customStyles = {
         transform: 'translate(-50%, -50%)',
         maxWidth: 600,
         width: '85%',
+        maxHeight: '50%',
     },
     overlay: {
         backgroundColor: 'rgba(0, 0, 0, 0.4)',

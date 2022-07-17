@@ -86,6 +86,5 @@ export const ProgressBar = styled.div<any>`
     )`};
     z-index: 1;
     bottom: 6px;
-    border-end-end-radius: 10px;
     border-end-start-radius: 10px;
 `;
