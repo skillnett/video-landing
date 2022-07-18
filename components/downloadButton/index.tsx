@@ -12,7 +12,7 @@ export const DownloadButton = ({ disabled }: any) => {
         <StyledDownloadButton
             onClick={() => {
                 if (analytics) {
-                    logEvent(analytics, 'web_page_app_download');
+                    logEvent(analytics, 'web_remove_objects_app_download');
                 }
                 window
                     ?.open('https://apps.apple.com/app/id1488926745', '_blank')
