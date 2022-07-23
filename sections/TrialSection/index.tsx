@@ -39,9 +39,11 @@ export const TrialSection = () => {
 
                 <DescriptionWrapper>
                     <BodyTextNormal>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nunc vulputate libero et velit interdum, ac aliquet odio
-                        mattis.
+                        RetouchAI offers you highly convenient tools to identify
+                        strangers and objects. The editor will precisely
+                        auto-detect the borders and highlight them for further
+                        auto removal. You just need to single them out in one
+                        tap to declutter the imperfection.
                     </BodyTextNormal>
                 </DescriptionWrapper>
 
@@ -51,7 +53,7 @@ export const TrialSection = () => {
                 </ListItem>
                 <ListItem>
                     <CheckMarkIco />
-                    <Heading3>7 Powerfull tools</Heading3>
+                    <Heading3>Powerful tools</Heading3>
                 </ListItem>
                 <ListItem>
                     <CheckMarkIco />

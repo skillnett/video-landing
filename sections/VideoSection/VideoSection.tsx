@@ -26,8 +26,14 @@ export const VideoSection = () => {
                 </SubheadingWrapper>
 
                 <BodyTextLg className='video-desktop-description'>
-                    Our algorithm helps you to automatically detect objects for
-                    removal.
+                    Tired of being photobombed? Thinking about getting rid of
+                    some imperfections in the background of the photo but don’t
+                    know how? Need to erase unwanted objects from your pictures
+                    to get them just right? All these annoying things shouldn’t
+                    be a problem anymore with our AI-driven photo editor.
+                    RetouchAI is that magic button that will help you easily
+                    transform poorly taken photos into the ones you actually
+                    deserve.
                 </BodyTextLg>
 
                 <ButtonWrapper>
@@ -40,8 +46,14 @@ export const VideoSection = () => {
             <PlayerSectionWrapper>
                 <Player />
                 <BodyTextLg className='video-mobile-description'>
-                    Our algorithm helps you to automatically detect objects for
-                    removal.
+                    Tired of being photobombed? Thinking about getting rid of
+                    some imperfections in the background of the photo but don’t
+                    know how? Need to erase unwanted objects from your pictures
+                    to get them just right? All these annoying things shouldn’t
+                    be a problem anymore with our AI-driven photo editor.
+                    RetouchAI is that magic button that will help you easily
+                    transform poorly taken photos into the ones you actually
+                    deserve.
                 </BodyTextLg>
 
                 <ColorShapeComponent className='video-section' />
