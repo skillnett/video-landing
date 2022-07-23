@@ -3,7 +3,7 @@ import { respondTo } from 'utils/respondTo';
 
 export const StyledButton = styled.a<any>`
     background-color: ${({ theme }: any) => theme.colors.dark};
-    padding: 10px 10px 8px 8px;
+    padding: 6px 6px 4px 4px;
     transition: 0.2s ease all;
     display: flex;
     justify-content: space-between;

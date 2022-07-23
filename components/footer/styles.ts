@@ -3,7 +3,7 @@ import { respondTo } from 'utils/respondTo';
 
 export const FooterWrapper = styled.div`
     background: ${({ theme }: any) => theme.colors.dark};
-    padding: 20px 0;
+    padding: 14px 0 20px;
     border-radius: 24px 24px 0px 0px;
     position: fixed;
     bottom: 0;

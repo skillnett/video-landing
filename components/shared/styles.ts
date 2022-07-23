@@ -3,7 +3,7 @@ import { respondTo } from 'utils/respondTo';
 
 export const Heading1 = styled.h1`
     font-weight: bold;
-    font-size: 42px;
+    font-size: 34px;
     line-height: 120%;
 
     ${respondTo.md`
@@ -32,9 +32,14 @@ export const Heading3 = styled.h3`
 
 export const Heading4 = styled.h4`
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 120%;
     letter-spacing: 0.05em;
+
+    ${respondTo.md`
+      font-size: 16px;
+      line-height: 120%;
+    `}
 `;
 
 export const BodyTextLg = styled.p`

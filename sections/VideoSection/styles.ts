@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { respondTo } from 'utils/respondTo';
 
 export const VideoSectionWrapper = styled.div`
-    padding: 40px 0 50px;
+    padding: 10px 0 50px;
     display: flex;
     flex-direction: column;
 
@@ -31,7 +31,7 @@ export const VideoSectionWrapper = styled.div`
 
 export const VideoSectionTextBlock = styled.div`
     max-width: 588px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     display: flex;
     align-items: flex-end;
     margin-right: 0;
@@ -54,7 +54,7 @@ export const HeadingWrapper = styled.div`
 `;
 
 export const SubheadingWrapper = styled.div`
-    margin-left: -6px;
+    margin-left: -36px;
 
     ${respondTo.md`
       margin-left: 0;

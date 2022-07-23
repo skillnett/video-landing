@@ -22,7 +22,7 @@ export const Footer = () => {
                 </LogoWrapper>
 
                 <DownloadButtonWrapper>
-                    <Heading4 style={{ marginBottom: 20 }}>
+                    <Heading4 style={{ marginBottom: 10 }}>
                         Start editing right now
                     </Heading4>
                     <DownloadButton />

@@ -5,7 +5,7 @@ export const StyledDownloadButton = styled.button`
     border: none;
     display: flex;
     align-items: center;
-    padding: 13px 40px;
+    padding: 11px 40px;
     border-radius: 20px;
     transition: 0.25s ease all;
     background-color: ${({ theme }: any) => theme.colors.dark};
