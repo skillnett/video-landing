@@ -6,6 +6,10 @@ const nextConfig = {
     compiler: {
         styledComponents: true,
     },
+    images: {
+        loader: 'akamai',
+        path: '',
+    },
     webpack(config) {
         config.plugins = config.plugins || [];
 
