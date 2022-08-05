@@ -36,6 +36,11 @@ export const DownloadButtonWrapper = styled.div`
 export const FooterLinks = styled.div`
     display: none;
 
+    & a {
+        color: white;
+        text-decoration: none;
+    }
+
     ${respondTo.md`
       display: flex;
       justify-content: space-around;

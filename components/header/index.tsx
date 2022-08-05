@@ -10,7 +10,7 @@ export const Header = () => {
                 <Image src='/logo.png' layout='fill' alt='logo' />
             </LogoWrapper>
 
-            <Button title='Contact us' href='mailto:test@email.com' />
+            <Button title='Contact us' href='mailto:support@retouch-ai.com' />
         </StyledHeader>
     );
 };

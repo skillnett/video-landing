@@ -3,6 +3,7 @@ import { Container } from 'components/container';
 import { DownloadButton } from 'components/downloadButton';
 import { BodyTextSm, Heading4 } from 'components/shared/styles';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import {
     DownloadButtonWrapper,
@@ -41,8 +42,16 @@ export const Footer = () => {
                 </SocialLinks>
 
                 <FooterLinks>
-                    <BodyTextSm>Terms & conditions</BodyTextSm>
-                    <BodyTextSm>Privacy policy</BodyTextSm>
+                    <Link href='/terms-of-service'>
+                        <a>
+                            <BodyTextSm>Terms & conditions</BodyTextSm>
+                        </a>
+                    </Link>
+                    <Link href='/privacy-policy'>
+                        <a>
+                            <BodyTextSm>Privacy policy</BodyTextSm>
+                        </a>
+                    </Link>
                 </FooterLinks>
             </Container>
         </FooterWrapper>
